@@ -1,17 +1,15 @@
 package sk.miro.hami.expense;
 
 public class User {
-    private static long i = 1;
     private long id;
     private String username;
     private String password;
 
-    public User() {
-        id = i++;
+    User() {
+        System.out.println("User() : Default constructor");
     }
 
-    public User(int id, String username, String password) {
-        this.id = i++;
+    User(long id, String username, String password) {
         this.username = username;
         this.password = password;
     }
@@ -28,11 +26,19 @@ public class User {
         return password;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String toString() {
+        return "UserIUD: " + getId() + ", Username: " + getUsername() + ", Password: " + getPassword();
     }
 }
