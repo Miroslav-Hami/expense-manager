@@ -1,14 +1,16 @@
 package sk.miro.hami.expense;
 
-public class Expense {
+public class Category {
     private long id;
     private String description;
+    private String name;
 
     @Override
     public String toString() {
-        return "Expense{" +
+        return "Category{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
+                ", name=" + name +
                 '}';
     }
 
@@ -26,5 +28,9 @@ public class Expense {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getName() {
+        return name;
     }
 }
