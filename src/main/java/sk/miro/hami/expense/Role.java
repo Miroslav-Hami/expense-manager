@@ -1,15 +1,14 @@
 package sk.miro.hami.expense;
 
 public class Role {
-    public enum authority { ADMIN, USER }
     private long id;
-    private authority name;
+    private Authority name;
 
     Role() {
         System.out.println("Role() : Default constructor");
     }
 
-    Role(long id, authority name) {
+    Role(long id, Authority name) {
         this.id = id;
         this.name = name;
     }
@@ -22,7 +21,7 @@ public class Role {
         this.id = id;
     }
 
-    public authority getAuthority() {
+    public Authority getAuthority() {
         return name;
     }
 
