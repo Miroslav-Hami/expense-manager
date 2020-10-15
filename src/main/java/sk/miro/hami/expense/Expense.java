@@ -1,15 +1,57 @@
 package sk.miro.hami.expense;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Expense {
     private long id;
     private String description;
+    private Date created;
+    private float amount;
+    private User user;
+    private Category category;
 
-    @Override
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     public String toString() {
-        return "Expense{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
+        return "Expense {" + "id = " + getId() +
+                ", User = " + getUser() +
+                ", Date = " + format.format(getCreated()) +
+                ", Category = " + getCategory() +
+                ", description = '" + getDescription() +
+                ", amount = " + getAmount() + " }";
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
+    }
+
+    public float getAmount() {
+        return amount;
+    }
+
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public long getId() {

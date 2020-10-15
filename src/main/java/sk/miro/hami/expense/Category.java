@@ -5,12 +5,18 @@ public class Category {
     private String description;
     private String name;
 
+    public Category(long id, String description, String name) {
+        this.id = id;
+        this.description = description;
+        this.name = name;
+    }
+
     @Override
     public String toString() {
-        return "Category{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                ", name=" + name +
+        return "Category {" +
+                "id = " + id +
+                ", description = '" + description + '\'' +
+                ", name = " + name +
                 '}';
     }
 
